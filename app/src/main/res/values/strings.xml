@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">SickLab</string>
+
+    <string name="title_activity_login_page">LoginPage</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="username">Email</string>
+    <string name="password">Password</string>
+    <string name="login">LOGIN</string>
+    <string name="hello">Hello Again!</string>
+    <string name="no_acc_yet">No account yet? Create one</string>
+    <string name="or">OR</string>
+    <string name="info">Sign in using</string>
+    <string name="sign_up">Sign up</string>
+    <string name="terms">Terms</string>
+</resources>
