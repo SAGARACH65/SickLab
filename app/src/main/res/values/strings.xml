@@ -13,4 +13,8 @@
     <string name="info">Sign in using</string>
     <string name="sign_up">Sign up</string>
     <string name="terms">Terms</string>
+    <string name="create_account">Create Account</string>
+    <string name="what_email">What\'s your email?</string>
+    <string name="create_password">Create a new Password</string>
+    <string name="check">Do you have a liscence to practice medicine?</string>
 </resources>

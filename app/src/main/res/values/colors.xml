@@ -6,7 +6,8 @@
     <color name="white">#FFF</color>
     <color name="viewSplit">#dddddd</color>
     <color name="black">#000000</color>
-<color name="yellow">#e7a011</color>
+    <color name="yellow">#e7a011</color>
+    <color name="signUp">#035eb9</color>
 
     <color name="green">#0cf427</color>
     <color name="red">#f50707</color>

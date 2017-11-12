@@ -10,14 +10,13 @@
 
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:paddingLeft="24dp"
         android:paddingRight="24dp"
-        android:paddingTop="40dp"
-        android:id="@+id/linearLayout">
-
+        android:paddingTop="40dp">
 
 
         <!-- Email Label -->
@@ -25,20 +24,20 @@
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="30dp"
             android:gravity="center"
-            android:textStyle="bold"
+            android:text="@string/hello"
             android:textColor="@color/white"
             android:textSize="25sp"
-            android:text="@string/hello" />
+            android:textStyle="bold" />
 
         <android.support.design.widget.TextInputLayout
+            android:id="@+id/textinputun"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
-            android:layout_marginVertical="15dp"
-            android:id="@+id/textinputun"
             android:layout_marginTop="8dp"
+            android:layout_marginVertical="15dp"
             android:textColorHint="@color/white">
 
             <EditText
@@ -53,11 +52,11 @@
 
         <!-- Password Label -->
         <android.support.design.widget.TextInputLayout
+            android:id="@+id/textinputpass"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="12dp"
             android:layout_marginTop="8dp"
-            android:id="@+id/textinputpass"
             android:textColorHint="@color/white">
 
             <EditText
@@ -75,12 +74,12 @@
 
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="15dp"
-            android:layout_marginTop="15dp"
             android:layout_gravity="center"
-            android:textColor="@color/white"
+            android:layout_marginTop="15dp"
             android:background="@drawable/rounded_button"
-            android:text="@string/login" />
+            android:padding="15dp"
+            android:text="@string/login"
+            android:textColor="@color/white" />
 
 
     </LinearLayout>
@@ -91,11 +90,11 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/linearLayout"
         android:layout_centerHorizontal="true"
-        android:textColor="@color/white"
-        android:textSize="18sp"
-        android:gravity="center"
         android:layout_marginTop="15dp"
-        android:text="@string/no_acc_yet" />
+        android:gravity="center"
+        android:text="@string/no_acc_yet"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
 
     <TextView
         android:id="@+id/textView3"
@@ -103,12 +102,12 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView2"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:text="@string/or"
         android:textColor="@color/white"
         android:textSize="18sp"
-        android:gravity="center"
-        android:textStyle="bold"
-        android:layout_marginTop="15dp"
-        android:text="@string/or" />
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/textView4"
@@ -153,8 +152,7 @@
         android:gravity="center"
         android:text="@string/sign_up"
         android:textColor="@color/white"
-        android:textSize="18sp"
-        />
+        android:textSize="18sp" />
 
     <TextView
         android:id="@+id/textView6"
