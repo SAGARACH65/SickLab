@@ -20,7 +20,7 @@ public class Fragment1 extends Fragment {
     private RecyclerView mRecyclerView;
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
-    private static String LOG_TAG = "CardViewActivity";
+    private static String LOG_TAG = "Fragment1";
 
     public Fragment1() {
 

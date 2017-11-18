@@ -30,7 +30,9 @@
         <activity android:name=".Fragment2" />
         <activity android:name=".Fragment3" />
         <activity android:name=".MakeReports" />
-        <activity android:name=".DiseaseDescription"></activity>
+        <activity android:name=".DiseaseDescription" />
+        <activity android:name=".DiseaseDescriptionForDoctors" />
+        <activity android:name=".AddSuggestionsByDoctors"></activity>
     </application>
 
 </manifest>

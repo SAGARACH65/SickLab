@@ -40,4 +40,9 @@
     <string name="disclamair">Note:You can report only a maximum of 10</string>
     <string name="report">Report</string>
 
+    <string name="enter_suggest">Enter Your Suggestions</string>
+    <string name="submit">Submit</string>
+
+    <string name="hint">Enter Your Message Here</string>
+
 </resources>
