@@ -7,11 +7,19 @@
     app:theme="@style/ThemeOverlay.AppCompat.Light">
 
 
+    <ImageView
+        android:id="@+id/tv_header_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        app:srcCompat="@android:drawable/ic_menu_sort_by_size" />
+
     <TextView
         android:id="@+id/mainToolBar"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
+        android:layout_marginStart="60dp"
+        android:gravity="start|center"
         android:textColor="#fff"
         android:textSize="20sp"
         android:textStyle="bold" />

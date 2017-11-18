@@ -9,7 +9,6 @@
     <color name="primary_text">#212121</color>
 
 
-
     <color name="white">#FFF</color>
     <color name="viewSplit">#dddddd</color>
     <color name="black">#000000</color>
@@ -22,10 +21,11 @@
     <color name="black_overlay">#66000000</color>
 
 
-
     <!-- Screens background color-->
     <color name="bg_screen1">#f64c73</color>
     <color name="bg_screen2">#20d2bb</color>
     <color name="bg_screen3">#3395ff</color>
     <color name="bg_screen4">#c873f4</color>
+
+    <color name="bg_list">#dddddd</color>
 </resources>

@@ -1,5 +1,7 @@
 package com.example.sagar.sicklab;
 
+import android.content.Intent;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -52,8 +54,9 @@ public class Fragment1 extends Fragment {
                     @Override
                     public void onItemClick(View view, int position) {
                         // do whatever
-                        Toast toast = Toast.makeText(getActivity(), "Hello Javatpoint" + position, Toast.LENGTH_SHORT);
-                        toast.show();
+                        Intent intent = new Intent(getActivity(), DiseaseDescription.class);
+
+                        startActivity(intent);
                     }
 
                     @Override
@@ -62,6 +65,18 @@ public class Fragment1 extends Fragment {
                     }
                 })
         );
+
+
+        FloatingActionButton myFab = (FloatingActionButton) view.findViewById(R.id.floatingActionButton);
+        myFab.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+
+
+                Intent intent = new Intent(getActivity(), MakeReports.class);
+
+                startActivityForResult(intent, 1);
+            }
+        });
 
 
         return view;

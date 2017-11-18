@@ -21,7 +21,7 @@
 
     <string name="tab1">Currently Reported</string>
     <string name="tab2">Previously Seen</string>
-    <string name="tab3">Report Disease</string>
+    <string name="tab3">All Reports</string>
     <string name="drawer_open">Drawer Opened</string>
     <string name="drawer_close">Drawer Closed</string>
 
@@ -33,5 +33,11 @@
 
     <string name="suggestions">Suggestions/Feedbacks</string>
     <string name="more_options">More Options</string>
+
+    <string name="make_report">Make a Report</string>
+    <string name="enter_disease_name">Enter Disease Name</string>
+    <string name="select_no">Select Number of People Infected</string>
+    <string name="disclamair">Note:You can report only a maximum of 10</string>
+    <string name="report">Report</string>
 
 </resources>
