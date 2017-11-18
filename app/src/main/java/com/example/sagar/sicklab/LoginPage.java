@@ -15,8 +15,7 @@ public class LoginPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_page);
 
-        Intent intent = new Intent(this, IntroActivity.class);
-        startActivity(intent);
+
 
         TextView tv1 = (TextView) findViewById(R.id.textView2);
         tv1.setOnClickListener(new View.OnClickListener() {
@@ -27,7 +26,6 @@ public class LoginPage extends AppCompatActivity {
 
             }
         });
-
 
         TextView tv2 = (TextView) findViewById(R.id.textView5);
         tv2.setOnClickListener(new View.OnClickListener() {

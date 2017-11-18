@@ -7,10 +7,12 @@ package com.example.sagar.sicklab;
 public class DataObject {
     private String mText1;
     private String mText2;
+    private String mText3;
 
-    DataObject (String text1, String text2){
+    DataObject (String text1, String text2,String text3){
         mText1 = text1;
         mText2 = text2;
+        mText3=text3;
     }
 
     public String getmText1() {
@@ -27,5 +29,9 @@ public class DataObject {
 
     public void setmText2(String mText2) {
         this.mText2 = mText2;
+    }
+
+    public String getmText3() {
+        return mText3;
     }
 }

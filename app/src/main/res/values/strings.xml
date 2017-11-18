@@ -17,11 +17,12 @@
     <string name="what_email">What\'s your email?</string>
     <string name="create_password">Create a new Password</string>
     <string name="check">Do you have a liscence to practice medicine?</string>
-
+    <string name="enter_name">Please Enter Your Name</string>
 
     <string name="tab1">Currently Reported</string>
     <string name="tab2">Previously Seen</string>
     <string name="tab3">Report Disease</string>
     <string name="drawer_open">Drawer Opened</string>
     <string name="drawer_close">Drawer Closed</string>
+
 </resources>

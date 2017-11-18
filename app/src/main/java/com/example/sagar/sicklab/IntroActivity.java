@@ -1,6 +1,7 @@
 package com.example.sagar.sicklab;
 
 import android.Manifest;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -54,6 +55,9 @@ public class IntroActivity extends AppIntro {
         // NOTE: you will probably need to ask VIBRATE permission in Manifest.
         setVibrate(true);
         setVibrateIntensity(30);
+
+
+
     }
 
     @Override
@@ -67,6 +71,9 @@ public class IntroActivity extends AppIntro {
     @Override
     public void onDonePressed(Fragment currentFragment) {
         super.onDonePressed(currentFragment);
+        Intent intent = new Intent(this, LoginPage.class);
+
+        startActivity(intent);
         finish();
     }
 
