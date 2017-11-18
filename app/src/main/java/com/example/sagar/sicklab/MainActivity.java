@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
                 .withActivity(this)
                 .withHeaderBackground(R.drawable.min_back)
                 .addProfiles(
-                        new ProfileDrawerItem().withName(get.getData("user_name")).withEmail(get.getData("email")).withIcon(getResources().getDrawable(R.drawable.emmu))
+                        new ProfileDrawerItem().withName( get.getData("user_name")).withEmail(get.getData("email")).withIcon(getResources().getDrawable(R.drawable.emmu))
                 )
                 .withOnAccountHeaderListener(new AccountHeader.OnAccountHeaderListener() {
                     @Override
@@ -163,8 +163,7 @@ public class MainActivity extends AppCompatActivity {
         super.onSaveInstanceState(outState);
     }
 
-
-    boolean doubleBackToExitPressedOnce = false;
+      boolean doubleBackToExitPressedOnce = false;
 
     @Override
     public void onBackPressed() {

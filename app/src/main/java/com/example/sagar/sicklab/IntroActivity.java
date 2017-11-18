@@ -47,7 +47,7 @@ public class IntroActivity extends AppIntro {
 
 
        // setFadeAnimation();
-        askForPermissions(new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 4);
+        askForPermissions(new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 1);
 
         setFlowAnimation();
 //        // Hide Skip/Done button.

@@ -11,7 +11,11 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.sagar.database.GetDataDisease;
+import com.example.sagar.database.GetUserData;
 
 import java.util.ArrayList;
 
@@ -45,6 +49,7 @@ public class Fragment1 extends Fragment {
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         rv.setLayoutManager(layoutManager);
 
+
         mAdapter = new MyRecyclerViewAdapter(getDataSet());
         rv.setAdapter(mAdapter);
 
@@ -54,9 +59,30 @@ public class Fragment1 extends Fragment {
                     @Override
                     public void onItemClick(View view, int position) {
                         // do whatever
-                        Intent intent = new Intent(getActivity(), DiseaseDescription.class);
 
-                        startActivity(intent);
+
+                        GetUserData get = new GetUserData(getActivity());
+                        String user_type=get.getData("user_type");
+
+
+                        GetDataDisease d1=new GetDataDisease(getActivity());
+
+                        if(user_type.equals("normal")) {
+                            Intent intent = new Intent(getActivity(), DiseaseDescription.class);
+                            Bundle extras = new Bundle();
+                            extras.putString("description", d1.getData(position, 7));
+                            extras.putString("name", d1.getData(position, 1));
+                            extras.putString("img_url", d1.getData(position, 6));
+                            startActivity(intent);
+
+                        }else{
+                            Intent intent = new Intent(getActivity(), DiseaseDescriptionForDoctors.class);
+                            Bundle extras = new Bundle();
+                            extras.putString("description", d1.getData(position, 7));
+                            extras.putString("name", d1.getData(position, 1));
+                            extras.putString("img_url", d1.getData(position, 6));
+                            startActivity(intent);
+                        }
                     }
 
                     @Override
@@ -97,11 +123,23 @@ public class Fragment1 extends Fragment {
 
     private ArrayList<DataObject> getDataSet() {
         ArrayList results = new ArrayList<DataObject>();
-        for (int index = 0; index < 5; index++) {
-            DataObject obj = new DataObject("Some Primary Text " + index,
-                    "Secondary " + index, "TertiaryText" + index);
-            results.add(index, obj);
+
+
+        GetDataDisease received = new GetDataDisease(getActivity());
+        int count = received.getNoOfData();
+
+
+        for (int i = 0; i < count; i++) {
+            DataObject obj = new DataObject("1st Report Date:" + received.getData(i + 1, 4) + "    "
+                    + "No of Reports:" + received.getData(i + 1, 3),
+                    received.getData(i + 1, 2) + " km away from You",
+
+                    received.getData(i + 1, 1)
+            );
+            results.add(i, obj);
         }
+
+
         return results;
     }
 }

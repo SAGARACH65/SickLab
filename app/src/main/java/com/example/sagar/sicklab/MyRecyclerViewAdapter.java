@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -25,12 +26,14 @@ public class MyRecyclerViewAdapter extends RecyclerView
         TextView label;
         TextView dateTime;
         TextView header;
+        ImageView img_view;
 
         public DataObjectHolder(View itemView) {
             super(itemView);
             header=(TextView)itemView.findViewById(R.id.textView11) ;
             label = (TextView) itemView.findViewById(R.id.textView12);
             dateTime = (TextView) itemView.findViewById(R.id.textView13);
+        img_view=(ImageView) itemView.findViewById(R.id.imageView4) ;
 
             Log.i(LOG_TAG, "Adding Listener");
             itemView.setOnClickListener(this);

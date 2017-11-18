@@ -12,6 +12,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.sagar.database.GetDataDisease;
+import com.example.sagar.database.GetDataDiseaseReported;
+
 import java.util.ArrayList;
 
 public class Fragment3 extends Fragment {
@@ -20,7 +23,8 @@ public class Fragment3 extends Fragment {
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
     private static String LOG_TAG = "Fragment3";
-    public Fragment3(){
+
+    public Fragment3() {
 
     }
 
@@ -28,8 +32,6 @@ public class Fragment3 extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
     }
-
-
 
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -61,8 +63,6 @@ public class Fragment3 extends Fragment {
         rv.setAdapter(mAdapter);
 
 
-
-
         return view;
     }
 
@@ -80,11 +80,23 @@ public class Fragment3 extends Fragment {
 
     private ArrayList<DataObject> getDataSet() {
         ArrayList results = new ArrayList<DataObject>();
-        for (int index = 0; index < 5; index++) {
-            DataObject obj = new DataObject("Some Primary Text " + index,
-                    "Secondary " + index, "TertiaryText" + index);
-            results.add(index, obj);
+
+
+        GetDataDiseaseReported received = new GetDataDiseaseReported(getActivity());
+        int count = received.getNoOfData();
+
+
+        for (int i = 0; i < count; i++) {
+            DataObject obj = new DataObject("1st Report Date:" + received.getData(i + 1, 4) + "    "
+                    + "No of Reports:" + received.getData(i + 1, 3),
+                    received.getData(i + 1, 2) + " km away from You",
+
+                    received.getData(i + 1, 1)
+            );
+            results.add(i, obj);
         }
+
+
         return results;
     }
 }

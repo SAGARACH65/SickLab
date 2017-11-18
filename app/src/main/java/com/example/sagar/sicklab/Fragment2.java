@@ -12,6 +12,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.sagar.database.GetDataDisease;
+import com.example.sagar.database.GetDataDiseaseHistory;
+
 import java.util.ArrayList;
 
 public class Fragment2 extends Fragment {
@@ -64,8 +67,15 @@ public class Fragment2 extends Fragment {
                     @Override
                     public void onItemClick(View view, int position) {
                         // do whatever
-                        Intent intent = new Intent(getActivity(), DiseaseDescription.class);
 
+
+                        GetDataDisease d1=new GetDataDisease(getActivity());
+
+                        Intent intent = new Intent(getActivity(), DiseaseDescription.class);
+                        Bundle extras = new Bundle();
+                        extras.putString("description", d1.getData(position, 7));
+                        extras.putString("name", d1.getData(position, 1));
+                        extras.putString("img_url", d1.getData(position, 6));
                         startActivity(intent);
                     }
 
@@ -93,11 +103,23 @@ public class Fragment2 extends Fragment {
 
     private ArrayList<DataObject> getDataSet() {
         ArrayList results = new ArrayList<DataObject>();
-        for (int index = 0; index < 5; index++) {
-            DataObject obj = new DataObject("Some Primary Text " + index,
-                    "Secondary " + index, "TertiaryText" + index);
-            results.add(index, obj);
+        GetDataDiseaseHistory received = new GetDataDiseaseHistory(getActivity());
+        int count = received.getNoOfData();
+
+
+        for (int i = 0; i < count; i++) {
+            DataObject obj = new DataObject("Start Date:" + received.getData(i + 1, 4) + "    "+
+                    "End Date:" + received.getData(i + 1, 5) + "    "
+
+                    + "No of Reports:" + received.getData(i + 1, 3),
+                    received.getData(i + 1, 2) + " km away from You",
+
+                    received.getData(i + 1, 1)
+            );
+            results.add(i, obj);
         }
+
+
         return results;
     }
 }

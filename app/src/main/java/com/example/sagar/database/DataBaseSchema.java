@@ -12,7 +12,9 @@ public class DataBaseSchema extends SQLiteOpenHelper {
 
     private static String DB_NAME = "SickLabDatabase";
     private static String TABLE_LOGIN_INFO = "login_info";
-
+    private static String TABLE_DISEASE_INFO = "disease_info";
+    private static String TABLE_DISEASE_INFO_PREVIOUS = "disease_info_previously_seen";
+    private static String TABLE_DISEASE_REPORTED = "disease_info_reported";
     private static int DB_VERSION = 1;
 
 
@@ -33,11 +35,35 @@ public class DataBaseSchema extends SQLiteOpenHelper {
                 + "user_name TEXT);");
 
 
-//        db.execSQL("CREATE TABLE " + "Sdsgsdg" + "("
-//                + "_id INTEGER PRIMARY KEY AUTOINCREMENT,"
-//                + "Student_info TEXT,"
-//                + "School_Name TEXT,"
-//                + "photo_bitmap BLOB);");
+        db.execSQL("CREATE TABLE " + TABLE_DISEASE_INFO + "("
+                + "_id INTEGER PRIMARY KEY AUTOINCREMENT,"
+                + "disease_name TEXT,"
+                + "district TEXT,"
+                + "no_of_reports TEXT,"
+                + "first_reported TEXT,"
+                + "last_reported TEXT,"
+                + "image_link TEXT,"
+                + "description TEXT);");
+
+        db.execSQL("CREATE TABLE " + TABLE_DISEASE_INFO_PREVIOUS + "("
+                + "_id INTEGER PRIMARY KEY AUTOINCREMENT,"
+                + "disease_name TEXT,"
+                + "district TEXT,"
+                + "no_of_reports TEXT,"
+                + "first_reported TEXT,"
+                + "last_reported TEXT,"
+                + "image_link TEXT,"
+                + "description TEXT);");
+
+        db.execSQL("CREATE TABLE " + TABLE_DISEASE_REPORTED + "("
+                + "_id INTEGER PRIMARY KEY AUTOINCREMENT,"
+                + "disease_name TEXT,"
+                + "district TEXT,"
+                + "no_of_reports TEXT,"
+                + "first_reported TEXT,"
+                + "last_reported TEXT,"
+                + "image_link TEXT,"
+                + "description TEXT);");
 
     }
 

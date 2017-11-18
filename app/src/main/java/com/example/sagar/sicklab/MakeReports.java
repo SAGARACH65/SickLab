@@ -26,7 +26,7 @@ import org.json.JSONObject;
 public class MakeReports extends AppCompatActivity implements ServerIP {
 
     private String check_message;
-    private String city;
+    private String city, stringLatitude, stringLongitude;
     private String disease_name, district, no_of_victims, token;
     private boolean callintent = true;
 
@@ -47,18 +47,16 @@ public class MakeReports extends AppCompatActivity implements ServerIP {
         GPSTracker gpsTracker = new GPSTracker(this);
 
         if (gpsTracker.getIsGPSTrackingEnabled()) {
-            String stringLatitude = String.valueOf(gpsTracker.latitude);
+            stringLatitude = String.valueOf(gpsTracker.latitude);
 
 
-            String stringLongitude = String.valueOf(gpsTracker.longitude);
-
-//            String country = gpsTracker.getCountryName(this);
+            stringLongitude = String.valueOf(gpsTracker.longitude);
 
 
             city = gpsTracker.getLocality(this);
 
-        TextView tv=(TextView) findViewById(R.id.textView14);
-        tv.setText("Your Current Location:"+city);
+            TextView tv = (TextView) findViewById(R.id.textView14);
+            tv.setText("Your Current Location:" + city);
 //            String postalCode = gpsTracker.getPostalCode(this);
 //
 //            String addressLine = gpsTracker.getAddressLine(this);
@@ -137,7 +135,8 @@ public class MakeReports extends AppCompatActivity implements ServerIP {
             //replacing spaces in disease name with %20
             disease_name = replace(disease_name);
 
-            String url = IP + report_head + report_disease + disease_name + report_district + city + report_no_of_victims + no_of_victims + report_token + token;
+            String url = IP + report_head + report_disease + disease_name + report_district + city + report_no_of_victims + no_of_victims
+                    + report_token + token + report_latitude + stringLatitude + report_longitude + stringLongitude;
 
             String jsonStr = sh.makeServiceCall(url);
 
