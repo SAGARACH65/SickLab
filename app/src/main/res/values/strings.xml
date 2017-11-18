@@ -44,5 +44,6 @@
     <string name="submit">Submit</string>
 
     <string name="hint">Enter Your Message Here</string>
+    <string name="authenticating">Authenticating Please Wait....</string>
 
 </resources>

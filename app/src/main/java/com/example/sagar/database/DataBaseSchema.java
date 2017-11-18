@@ -28,14 +28,16 @@ public class DataBaseSchema extends SQLiteOpenHelper {
         db.execSQL("CREATE TABLE " + TABLE_LOGIN_INFO + "("
                 + "_id INTEGER PRIMARY KEY AUTOINCREMENT,"
                 + "Token TEXT,"
-                + "isteacher_or_parent TEXT);");
+                + "user_type TEXT,"
+                + "email TEXT,"
+                + "user_name TEXT);");
 
 
-        db.execSQL("CREATE TABLE " + TABLE_LOGIN_INFO + "("
-                + "_id INTEGER PRIMARY KEY AUTOINCREMENT,"
-                + "Student_info TEXT,"
-                + "School_Name TEXT,"
-                + "photo_bitmap BLOB);");
+//        db.execSQL("CREATE TABLE " + "Sdsgsdg" + "("
+//                + "_id INTEGER PRIMARY KEY AUTOINCREMENT,"
+//                + "Student_info TEXT,"
+//                + "School_Name TEXT,"
+//                + "photo_bitmap BLOB);");
 
     }
 

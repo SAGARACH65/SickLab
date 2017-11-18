@@ -2,6 +2,7 @@ package com.example.sagar.sicklab;
 
 import android.Manifest;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -15,6 +16,7 @@ import com.github.paolorotolo.appintro.AppIntroFragment;
  */
 
 public class IntroActivity extends AppIntro {
+    private static final String PREF_IS_LOGGED_IN = "IS_LOGGED";
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,7 +65,10 @@ public class IntroActivity extends AppIntro {
     @Override
     public void onSkipPressed(Fragment currentFragment) {
         super.onSkipPressed(currentFragment);
+        Intent intent = new Intent(this, LoginPage.class);
 
+        startActivity(intent);
+        finish();
 
         finish();
     }
