@@ -49,9 +49,9 @@ public class MainActivity extends AppCompatActivity {
 
         AccountHeader headerResult = new AccountHeaderBuilder()
                 .withActivity(this)
-                .withHeaderBackground(R.drawable.background_login)
+                .withHeaderBackground(R.drawable.min_back)
                 .addProfiles(
-                        new ProfileDrawerItem().withName(get.getData("user_name")).withEmail(get.getData("email")).withIcon(getResources().getDrawable(R.drawable.background_login))
+                        new ProfileDrawerItem().withName(get.getData("user_name")).withEmail(get.getData("email")).withIcon(getResources().getDrawable(R.drawable.emmu))
                 )
                 .withOnAccountHeaderListener(new AccountHeader.OnAccountHeaderListener() {
                     @Override
@@ -67,14 +67,14 @@ public class MainActivity extends AppCompatActivity {
                 .withActivity(this)
                 .withFullscreen(true)
                 .addDrawerItems(
-                        new PrimaryDrawerItem().withName(R.string.profile).withIcon(R.drawable.home).withIdentifier(1),
-                        new PrimaryDrawerItem().withName(R.string.logout).withIcon(R.drawable.home),
+                        new PrimaryDrawerItem().withName(R.string.profile).withIcon(R.drawable.profile).withIdentifier(1),
+                        new PrimaryDrawerItem().withName(R.string.logout).withIcon(R.drawable.logout),
 
                         //add some more items to get a scrolling list
                         new SectionDrawerItem().withName(R.string.more_options),
-                        new SecondaryDrawerItem().withName(R.string.dev_profile).withIcon(R.drawable.home),
-                        new SecondaryDrawerItem().withName(R.string.rate_us).withIcon(R.drawable.home),
-                        new SecondaryDrawerItem().withName(R.string.suggestions).withIcon(R.drawable.home)
+                        new SecondaryDrawerItem().withName(R.string.dev_profile).withIcon(R.drawable.developer),
+                        new SecondaryDrawerItem().withName(R.string.rate_us).withIcon(R.drawable.star),
+                        new SecondaryDrawerItem().withName(R.string.suggestions).withIcon(R.drawable.suggestion)
 
 
                 )

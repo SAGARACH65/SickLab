@@ -22,10 +22,10 @@
 
         android:layout_height="wrap_content"
         app:button_color="@color/colorAccent"
-        app:icon_one="@drawable/googleg_standard_color_18"
+        app:icon_one="@drawable/currently_reported"
 
-        app:icon_three="@drawable/googleg_standard_color_18"
-        app:icon_two="@drawable/googleg_standard_color_18"
+        app:icon_three="@drawable/all_reports"
+        app:icon_two="@drawable/prev_seen"
         app:layout_behavior="eu.long1.spacetablayout.SpaceTabLayoutBehavior"
 
         app:number_of_tabs="three"
