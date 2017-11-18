@@ -37,7 +37,7 @@ public class DataStoreUser {
             user_data.put("email", email);
             user_data.put("user_name", user_name);
 
-            db.insert("student_profile", null, user_data);
+            db.insert("login_info", null, user_data);
         }
     }
 }

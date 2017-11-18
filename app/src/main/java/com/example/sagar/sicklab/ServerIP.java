@@ -19,7 +19,7 @@ public interface ServerIP {
     String login_password="&password=";
 
     String report_disease="disease=";
-    String report_location="&location=";
+    String report_token="&api_token=";
     String report_district="&district=";
     String report_no_of_victims="&no_of_victims=";
 

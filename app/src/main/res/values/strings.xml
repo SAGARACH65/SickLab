@@ -45,5 +45,7 @@
 
     <string name="hint">Enter Your Message Here</string>
     <string name="authenticating">Authenticating Please Wait....</string>
+    <string name="cancel">Cancle</string>
+
 
 </resources>

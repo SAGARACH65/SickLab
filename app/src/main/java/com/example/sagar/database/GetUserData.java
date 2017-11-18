@@ -25,7 +25,7 @@ public class GetUserData {
     //request specifies the data required by the caller
     public String getData(String request) {
         SQLiteDatabase db = open();
-        Cursor cursor = db.query("student_profile",
+        Cursor cursor = db.query("login_info",
                 new String[]{"_id", "Token", "user_type", "email","user_name"},
                 null,
                 null, null, null, null

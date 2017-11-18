@@ -4,6 +4,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
+import android.os.Handler;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AlertDialog;
@@ -15,6 +16,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
+import com.example.sagar.database.GetUserData;
 import com.mikepenz.materialdrawer.AccountHeader;
 import com.mikepenz.materialdrawer.AccountHeaderBuilder;
 import com.mikepenz.materialdrawer.Drawer;
@@ -43,13 +45,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        GetUserData get = new GetUserData(getApplicationContext());
 
         AccountHeader headerResult = new AccountHeaderBuilder()
                 .withActivity(this)
                 .withHeaderBackground(R.drawable.background_login)
                 .addProfiles(
-                        new ProfileDrawerItem().withName("Mike Penz").withEmail("mikepenz@gmail.com").withIcon(getResources().getDrawable(R.drawable.background_login))
+                        new ProfileDrawerItem().withName(get.getData("user_name")).withEmail(get.getData("email")).withIcon(getResources().getDrawable(R.drawable.background_login))
                 )
                 .withOnAccountHeaderListener(new AccountHeader.OnAccountHeaderListener() {
                     @Override
@@ -93,20 +95,14 @@ public class MainActivity extends AppCompatActivity {
                         if (position == 2) {
 
 
+                            SharedPreferences sharedPreferences = getSharedPreferences(PREF_NAME, 0);
+                            SharedPreferences.Editor editor = sharedPreferences.edit();
+                            editor.putBoolean("FirstLogin", true);
+                            editor.apply();
 
-
-
-                                            SharedPreferences sharedPreferences = getSharedPreferences(PREF_NAME, 0);
-                                            SharedPreferences.Editor editor = sharedPreferences.edit();
-                                            editor.putBoolean("FirstLogin", true);
-                                            editor.apply();
-
-                                            Intent intent = new Intent(getApplicationContext(), LoginPage.class);
-                                            startActivity(intent);
-                                            finish();
-
-
-
+                            Intent intent = new Intent(getApplicationContext(), LoginPage.class);
+                            startActivity(intent);
+                            finish();
 
 
                         }
@@ -167,13 +163,35 @@ public class MainActivity extends AppCompatActivity {
         super.onSaveInstanceState(outState);
     }
 
+
+    boolean doubleBackToExitPressedOnce = false;
+
     @Override
     public void onBackPressed() {
         //handle the back press :D close the drawer first and if the drawer is closed close the activity
         if (result != null && result.isDrawerOpen()) {
             result.closeDrawer();
         } else {
-            super.onBackPressed();
+
+            if (doubleBackToExitPressedOnce) {
+                super.onBackPressed();
+                return;
+            }
+
+            this.doubleBackToExitPressedOnce = true;
+            Toast.makeText(this, "Please click BACK again to exit", Toast.LENGTH_SHORT).show();
+
+            new Handler().postDelayed(new Runnable() {
+
+                @Override
+                public void run() {
+                    doubleBackToExitPressedOnce = false;
+                }
+            }, 2000);
+
+
         }
     }
+
+
 }
