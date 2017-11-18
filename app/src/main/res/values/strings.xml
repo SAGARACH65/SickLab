@@ -25,4 +25,13 @@
     <string name="drawer_open">Drawer Opened</string>
     <string name="drawer_close">Drawer Closed</string>
 
+    <string name="profile">Profile</string>
+    <string name="logout">Logout</string>
+
+    <string name="dev_profile">Developer Profile</string>
+    <string name="rate_us">Rate Us</string>
+
+    <string name="suggestions">Suggestions/Feedbacks</string>
+    <string name="more_options">More Options</string>
+
 </resources>

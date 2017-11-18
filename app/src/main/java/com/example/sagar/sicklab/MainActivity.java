@@ -60,24 +60,16 @@ public class MainActivity extends AppCompatActivity {
                 .withActivity(this)
                 .withFullscreen(true)
                 .addDrawerItems(
-                        new PrimaryDrawerItem().withName(R.string.app_name).withIcon(R.drawable.home).withIdentifier(1),
-                        new PrimaryDrawerItem().withName(R.string.app_name).withIcon(R.drawable.home),
-                        new PrimaryDrawerItem().withName(R.string.app_name).withIcon(R.drawable.home),
+                        new PrimaryDrawerItem().withName(R.string.profile).withIcon(R.drawable.home).withIdentifier(1),
+                        new PrimaryDrawerItem().withName(R.string.logout).withIcon(R.drawable.home),
+
                         //add some more items to get a scrolling list
-                        new SectionDrawerItem().withName(R.string.app_name),
-                        new SecondaryDrawerItem().withName(R.string.app_name).withIcon(R.drawable.home),
-                        new SecondaryDrawerItem().withName(R.string.app_name).withIcon(R.drawable.home).withEnabled(false),
-                        new SecondaryDrawerItem().withName(R.string.app_name).withIcon(R.drawable.home),
-                        new SecondaryDrawerItem().withName(R.string.app_name).withIcon(R.drawable.home),
-                        new SectionDrawerItem().withName(R.string.app_name),
-                        new PrimaryDrawerItem().withName(R.string.app_name).withIcon(R.drawable.home),
-                        new PrimaryDrawerItem().withName(R.string.app_name).withIcon(R.drawable.home),
-                        new PrimaryDrawerItem().withName(R.string.app_name).withIcon(R.drawable.home),
-                        new PrimaryDrawerItem().withName(R.string.app_name).withIcon(R.drawable.home),
-                        new PrimaryDrawerItem().withName(R.string.app_name).withIcon(R.drawable.home),
-                        new PrimaryDrawerItem().withName(R.string.app_name).withIcon(R.drawable.home),
-                        new PrimaryDrawerItem().withName(R.string.app_name).withIcon(R.drawable.home),
-                        new PrimaryDrawerItem().withName(R.string.app_name).withIcon(R.drawable.home)
+                        new SectionDrawerItem().withName(R.string.more_options),
+                        new SecondaryDrawerItem().withName(R.string.dev_profile).withIcon(R.drawable.home),
+                        new SecondaryDrawerItem().withName(R.string.rate_us).withIcon(R.drawable.home).withEnabled(false),
+                        new SecondaryDrawerItem().withName(R.string.suggestions).withIcon(R.drawable.home)
+
+
                 )
                 .withSavedInstance(savedInstanceState)
                 .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
