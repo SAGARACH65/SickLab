@@ -14,17 +14,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppMaterialTheme">
-        <activity android:name=".LoginPage">
+        <activity android:name=".SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SignUP"></activity>
-
-
-        <activity android:name=".IntroActivity"></activity>
+        <activity android:name=".SignUP" />
+        <activity android:name=".IntroActivity" />
+        <activity android:name=".LoginPage" />
+        <activity android:name=".LoginChecker" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".Fragment1" />
+        <activity android:name=".Fragment2" />
+        <activity android:name=".Fragment3" />
     </application>
 
 </manifest>

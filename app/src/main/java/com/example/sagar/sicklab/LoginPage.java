@@ -5,6 +5,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class LoginPage extends AppCompatActivity {
@@ -37,5 +38,17 @@ public class LoginPage extends AppCompatActivity {
 
             }
         });
+
+        Button btn1 = (Button) findViewById(R.id.button1);
+        btn1.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+
+                startActivity(intent);
+
+            }
+        });
+
+
     }
 }
