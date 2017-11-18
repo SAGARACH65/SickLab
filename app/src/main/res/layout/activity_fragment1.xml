@@ -22,7 +22,7 @@
         android:layout_marginBottom="28dp"
         android:layout_marginEnd="39dp"
         android:clickable="true"
-        android:src="@android:drawable/ic_menu_add"
+        android:src="@drawable/plus"
         tools:layout_editor_absoluteX="306dp"
         tools:layout_editor_absoluteY="485dp" />
 
