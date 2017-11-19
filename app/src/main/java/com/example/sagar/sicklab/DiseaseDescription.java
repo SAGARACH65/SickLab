@@ -11,7 +11,7 @@ import android.widget.TextView;
 import com.example.sagar.database.GetDataDisease;
 
 public class DiseaseDescription extends AppCompatActivity {
-
+    String  link;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,16 +19,23 @@ public class DiseaseDescription extends AppCompatActivity {
 
 
         Bundle extras = getIntent().getExtras();
-        String description = extras.getString("description");
-        String disease_name = extras.getString("name");
-        String img_url = extras.getString("img_url");
 
 
-        TextView tv = (TextView) findViewById(R.id.mainToolBar);
-        tv.setText(disease_name);
+
+            String description = extras.getString("description");
+            String disease_name = extras.getString("name");
+            String img_url = extras.getString("img_url");
 
 
-        TextView tv1 = (TextView) findViewById(R.id.textView11);
-        tv1.setText(description);
+
+
+            TextView tv = (TextView) findViewById(R.id.mainToolBar);
+            tv.setText(disease_name);
+
+
+            TextView tv1 = (TextView) findViewById(R.id.textView11);
+            tv1.setText(description);
+
+
     }
 }

@@ -31,7 +31,7 @@ public interface ServerIP {
     String trending_latitude = "&latitude=";
     String trending_longitude = "&longitude=";
 
-    String history_head = "disease/trending?";
+    String history_head = "disease/history?";
 
     String suggestion_head = "suggestion?";
     String suggestion_text = "text=";

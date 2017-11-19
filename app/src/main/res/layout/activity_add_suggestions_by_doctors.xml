@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/signUp"
     tools:context="com.example.sagar.sicklab.AddSuggestionsByDoctors">
 
     <TextView
@@ -12,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="55dp"
+        android:layout_marginTop="25dp"
         android:text="@string/enter_suggest"
         android:textColor="@color/white"
         android:textSize="30sp"
@@ -21,7 +22,7 @@
     <EditText
         android:id="@+id/editText3"
         android:layout_width="wrap_content"
-        android:layout_height="300dp"
+        android:layout_height="350dp"
         android:layout_alignEnd="@+id/textView11"
         android:layout_alignStart="@+id/textView11"
         android:layout_below="@+id/textView11"

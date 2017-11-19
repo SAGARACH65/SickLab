@@ -20,7 +20,7 @@ import org.json.JSONObject;
 
 public class AddSuggestionsByDoctors extends AppCompatActivity implements ServerIP {
     private String description, check_message, disease_name;
-    private boolean callintent = false;
+    private boolean callintent = true;
     private String token;
 
     @Override
@@ -32,7 +32,7 @@ public class AddSuggestionsByDoctors extends AppCompatActivity implements Server
         Bundle extras = getIntent().getExtras();
         disease_name = extras.getString("name");
 
-        Button btn1 = (Button) findViewById(R.id.button1);
+        Button btn1 = (Button) findViewById(R.id.button3);
         btn1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 //                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
@@ -43,12 +43,12 @@ public class AddSuggestionsByDoctors extends AppCompatActivity implements Server
                 boolean isAvailable = Utility.isNetworkAvailable(AddSuggestionsByDoctors.this);
                 if (!isAvailable) {
                     Toast.makeText(getApplicationContext(), "No Internet Connection Available", Toast.LENGTH_LONG).show();
-                    callintent = true;
+                    callintent = false;
                 } else {
                     EditText suggestion = (EditText) findViewById(R.id.editText3);
                     if (isempty(suggestion)) {
                         Toast.makeText(getApplicationContext(), "Please Enter Username", Toast.LENGTH_LONG).show();
-
+                        callintent = false;
                     }
                     description = suggestion.getText().toString();
 
@@ -93,6 +93,7 @@ public class AddSuggestionsByDoctors extends AppCompatActivity implements Server
             //replacing spaces in disease name with %20
             description = replace(description);
 
+            disease_name = replace(disease_name);
             String url = IP + suggestion_head + suggestion_text + description + suggestion_token + token + suggestion_disease + disease_name;
 
 

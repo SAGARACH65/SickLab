@@ -576,15 +576,12 @@ public class LoginPage extends AppCompatActivity implements ServerIP {
         protected void onPostExecute(Void result) {
 
             if (has_error_occured) {
-                Toast.makeText(getApplicationContext(), "SomeProblem Occured", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "Some  Problem Occured", Toast.LENGTH_LONG).show();
 
             }
 
             if (isLoginSuccessful) {
 
-
-                LoginPage.GetDiseaseHistory connect = new LoginPage.GetDiseaseHistory();
-                connect.execute();
 
                 dialog.dismiss();
                 //starts another aCTIVITY

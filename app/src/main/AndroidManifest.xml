@@ -30,9 +30,7 @@
         <activity android:name=".LoginPage" />
         <activity android:name=".LoginChecker" />
         <activity android:name=".MainActivity" />
-        <activity android:name=".Fragment1" />
-        <activity android:name=".Fragment2" />
-        <activity android:name=".Fragment3" />
+
         <activity android:name=".MakeReports" />
         <activity android:name=".DiseaseDescription" />
         <activity android:name=".DiseaseDescriptionForDoctors" />

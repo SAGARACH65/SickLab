@@ -31,7 +31,11 @@ public class DiseaseDescriptionForDoctors extends AppCompatActivity {
                 //tv_header_title
                 Bundle extras = new Bundle();
                 extras.putString("name", disease_name);
+                intent.putExtras(extras);
                 startActivity(intent);
+
+
+
 
             }
         });

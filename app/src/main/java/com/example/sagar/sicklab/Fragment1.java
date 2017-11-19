@@ -62,25 +62,32 @@ public class Fragment1 extends Fragment {
 
 
                         GetUserData get = new GetUserData(getActivity());
-                        String user_type=get.getData("user_type");
+                        String user_type = get.getData("user_type");
 
 
-                        GetDataDisease d1=new GetDataDisease(getActivity());
+                        GetDataDisease d1 = new GetDataDisease(getActivity());
 
-                        if(user_type.equals("normal")) {
+                        if (user_type.equals("normal")) {
                             Intent intent = new Intent(getActivity(), DiseaseDescription.class);
                             Bundle extras = new Bundle();
-                            extras.putString("description", d1.getData(position, 7));
-                            extras.putString("name", d1.getData(position, 1));
-                            extras.putString("img_url", d1.getData(position, 6));
+
+                            String s1 = d1.getData(position+1, 7);
+                            String s2 = d1.getData(position+1, 1);
+                            String s3 = d1.getData(position+1, 6);
+                            extras.putString("description", s1);
+                            extras.putString("name", s2);
+                            extras.putString("img_url", s3);
+                            intent.putExtras(extras);
                             startActivity(intent);
 
-                        }else{
+
+                        } else {
                             Intent intent = new Intent(getActivity(), DiseaseDescriptionForDoctors.class);
                             Bundle extras = new Bundle();
-                            extras.putString("description", d1.getData(position, 7));
-                            extras.putString("name", d1.getData(position, 1));
-                            extras.putString("img_url", d1.getData(position, 6));
+                            extras.putString("description", d1.getData(position+1, 7));
+                            extras.putString("name", d1.getData(position+1, 1));
+                            extras.putString("img_url", d1.getData(position+1, 6));
+                            intent.putExtras(extras);
                             startActivity(intent);
                         }
                     }

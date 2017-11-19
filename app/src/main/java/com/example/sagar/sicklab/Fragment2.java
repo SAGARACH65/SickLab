@@ -73,9 +73,10 @@ public class Fragment2 extends Fragment {
 
                         Intent intent = new Intent(getActivity(), DiseaseDescription.class);
                         Bundle extras = new Bundle();
-                        extras.putString("description", d1.getData(position, 7));
-                        extras.putString("name", d1.getData(position, 1));
-                        extras.putString("img_url", d1.getData(position, 6));
+                        extras.putString("description", d1.getData(position+1, 7));
+                        extras.putString("name", d1.getData(position+1, 1));
+                        extras.putString("img_url", d1.getData(position+1, 6));
+                        intent.putExtras(extras);
                         startActivity(intent);
                     }
 
