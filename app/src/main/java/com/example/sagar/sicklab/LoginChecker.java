@@ -35,14 +35,14 @@ public class LoginChecker extends AppCompatActivity {
             editor1.putBoolean("islogged", false);
             editor1.apply();
 
-            intent = new Intent(this, IntroActivity.class);
-            startActivity(intent);
+
         } else {
 
 
-            intent = new Intent(this, LoginPage.class);
-
+            intent = new Intent(this, IntroActivity.class);
             startActivity(intent);
+
+    
         }
 
 

@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#009688</color>
-    <color name="colorPrimaryDark">#00796B</color>
+    <color name="colorPrimary">#3f51b5</color>
+    <color name="colorPrimaryDark">#303f9f</color>
+    <color name="colorAccent">#FF4081</color>
 
-    <color name="primary_light">#D1C4E9</color>
 
-    <color name="colorAccent">#fff</color>
     <color name="primary_text">#212121</color>
-
+<color name="progress_bar">#ec076e</color>
 
     <color name="white">#FFF</color>
     <color name="viewSplit">#dddddd</color>
@@ -22,10 +21,10 @@
 
 
     <!-- Screens background color-->
-    <color name="bg_screen1">#f64c73</color>
+    <color name="bg_screen1">#293397</color>
     <color name="bg_screen2">#20d2bb</color>
     <color name="bg_screen3">#3395ff</color>
-    <color name="bg_screen4">#c873f4</color>
+    <color name="bg_screen4">#ca2d5c</color>
 
     <color name="bg_list">#dddddd</color>
 </resources>

@@ -11,10 +11,10 @@
         android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="42dp"
+        android:paddingStart="5dp"
         android:text="@string/create_account"
         android:textColor="@color/white"
         android:textSize="30sp"
@@ -55,21 +55,22 @@
         android:layout_marginTop="15dp"
         android:background="@drawable/rounded_edittext"
         android:ems="10"
-        android:inputType="textPersonName" />
+        android:inputType="textPersonName"
+        android:paddingStart="5dp" />
 
     <EditText
         android:id="@+id/editText2"
-
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_alignEnd="@+id/editText"
         android:layout_alignStart="@+id/textView9"
         android:layout_below="@+id/textView9"
-
         android:layout_marginTop="19dp"
+
         android:background="@drawable/rounded_edittext"
         android:ems="10"
-        android:inputType="textEmailAddress" />
+        android:inputType="textEmailAddress"
+        android:paddingStart="5dp" />
 
 
     <TextView
@@ -77,9 +78,9 @@
         android:layout_width="250dp"
 
         android:layout_height="wrap_content"
-        android:layout_above="@+id/button2"
         android:layout_alignStart="@+id/editText2"
-        android:layout_marginBottom="12dp"
+        android:layout_below="@+id/editText3"
+        android:layout_marginTop="12dp"
         android:gravity="center"
 
         android:text="@string/check"
@@ -102,6 +103,7 @@
         android:layout_width="wrap_content"
         android:layout_height="39dp"
         android:layout_alignTop="@+id/textView10"
+
         android:layout_toEndOf="@+id/textView10" />
 
     <TextView
@@ -127,6 +129,7 @@
         android:layout_marginTop="19dp"
         android:background="@drawable/rounded_edittext"
         android:ems="10"
-        android:inputType="textPassword" />
+        android:inputType="textPassword"
+        android:paddingStart="5dp" />
 
 </RelativeLayout>

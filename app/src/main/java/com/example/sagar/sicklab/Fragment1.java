@@ -139,7 +139,7 @@ public class Fragment1 extends Fragment {
         for (int i = 0; i < count; i++) {
             DataObject obj = new DataObject("1st Report Date:" + received.getData(i + 1, 4) + "    "
                     + "No of Reports:" + received.getData(i + 1, 3),
-                    received.getData(i + 1, 2) + " km away from You",
+                    "12.2" + " km away from You",
 
                     received.getData(i + 1, 1)
             );

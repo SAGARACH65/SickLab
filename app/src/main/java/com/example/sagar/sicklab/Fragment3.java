@@ -59,7 +59,7 @@ public class Fragment3 extends Fragment {
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         rv.setLayoutManager(layoutManager);
 
-        mAdapter = new MyRecyclerViewAdapter(getDataSet());
+        mAdapter = new MyRecyclerViewAdapter2(getDataSet());
         rv.setAdapter(mAdapter);
 
 
@@ -69,7 +69,7 @@ public class Fragment3 extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
-        ((MyRecyclerViewAdapter) mAdapter).setOnItemClickListener(new MyRecyclerViewAdapter
+        ((MyRecyclerViewAdapter2) mAdapter).setOnItemClickListener(new MyRecyclerViewAdapter2
                 .MyClickListener() {
             @Override
             public void onItemClick(int position, View v) {
@@ -89,7 +89,7 @@ public class Fragment3 extends Fragment {
         for (int i = 0; i < count; i++) {
             DataObject obj = new DataObject("1st Report Date:" + received.getData(i + 1, 4) + "    "
                     + "No of Reports:" + received.getData(i + 1, 3),
-                    received.getData(i + 1, 2) + " km away from You",
+                    "12.2" + " km away from You",
 
                     received.getData(i + 1, 1)
             );

@@ -26,7 +26,6 @@ import org.json.JSONObject;
 
 import java.util.HashMap;
 
-
 public class LoginPage extends AppCompatActivity implements ServerIP {
     private String user_name, pass_word;
     Dialog dialog;
@@ -83,10 +82,9 @@ public class LoginPage extends AppCompatActivity implements ServerIP {
         Button btn1 = (Button) findViewById(R.id.button1);
         btn1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-//                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-//
-//                startActivity(intent);
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
 
+                startActivity(intent);
 
                 boolean isAvailable = Utility.isNetworkAvailable(LoginPage.this);
                 if (!isAvailable) {
@@ -113,10 +111,10 @@ public class LoginPage extends AppCompatActivity implements ServerIP {
                         LoginPage.ConnectToLogin connect = new LoginPage.ConnectToLogin();
                         connect.execute();
 
-
                     }
 
                 }
+
             }
         });
 
@@ -498,7 +496,7 @@ public class LoginPage extends AppCompatActivity implements ServerIP {
             // Making a request to url and getting response
             GetUserData get = new GetUserData(getApplicationContext());
 
-            String url = IP + history_head + trending_token + get.getData("Token") + trending_district + city + trending_latitude + stringLatitude + trending_longitude + stringLongitude;
+            String url = IP + unverified_head + trending_token + get.getData("Token") + trending_district + city + trending_latitude + stringLatitude + trending_longitude + stringLongitude;
 
             String jsonStr = sh.makeServiceCall(url);
 
@@ -520,19 +518,21 @@ public class LoginPage extends AppCompatActivity implements ServerIP {
 
                         for (int i = 0; i < data.length(); i++) {
                             JSONObject c = data.getJSONObject(i);
-                            String disease_name = c.getString("disease");
-                            String district = c.getString("district");
-                            String no_of_reports = c.getString("no_of_reports");
-                            String first_reported = c.getString("start_date");
-                            String last_reported = c.getString("end_date");
-                            String image_link = c.getString("image_link");
-                            String description = c.getString("description");
+                            String disease_name1 = c.getString("disease");
+                            String district1 = c.getString("district");
+                            String no_of_reports1 = c.getString("no_of_reports");
+                            String first_reported1 = c.getString("first_reported");
+                            String last_reported1 = c.getString("last_reported");
+                            String image_link1 = c.getString("image_link");
+                            String description1 = c.getString("description");
 
                             DataStoreDiseaseReported store = new DataStoreDiseaseReported(getApplicationContext());
                             if (i == 0) {
-                                store.storeDiseaseInfo(disease_name, district, no_of_reports, first_reported, last_reported, image_link, description, true, false);
+                                store.storeDiseaseInfo(disease_name1, district1, no_of_reports1, first_reported1, last_reported1, image_link1,
+                                        description1, true, false);
                             } else {
-                                store.storeDiseaseInfo(disease_name, district, no_of_reports, first_reported, last_reported, image_link, description, false, false);
+                                store.storeDiseaseInfo(disease_name1, district1, no_of_reports1, first_reported1, last_reported1, image_link1,
+                                        description1, false, false);
                             }
 
                         }
@@ -582,7 +582,6 @@ public class LoginPage extends AppCompatActivity implements ServerIP {
 
             if (isLoginSuccessful) {
 
-
                 dialog.dismiss();
                 //starts another aCTIVITY
                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
@@ -591,7 +590,6 @@ public class LoginPage extends AppCompatActivity implements ServerIP {
 
 
             }
-
 
         }
     }

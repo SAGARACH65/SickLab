@@ -1,7 +1,7 @@
 package com.example.sagar.sicklab;
 
 /**
- * Created by Sagar on 11/18/2017.
+ * Created by Sagar on 11/19/2017.
  */
 
 import android.support.v7.widget.RecyclerView;
@@ -13,12 +13,13 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.sagar.database.GetDataDisease;
+import com.example.sagar.database.GetDataDiseaseReported;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
-public class MyRecyclerViewAdapter extends RecyclerView
-        .Adapter<MyRecyclerViewAdapter
+public class MyRecyclerViewAdapter2 extends RecyclerView
+        .Adapter<MyRecyclerViewAdapter2
         .DataObjectHolder> {
     private static String LOG_TAG = "MyRecyclerViewAdapter";
     private ArrayList<DataObject> mDataset;
@@ -53,7 +54,7 @@ public class MyRecyclerViewAdapter extends RecyclerView
         this.myClickListener = myClickListener;
     }
 
-    public MyRecyclerViewAdapter(ArrayList<DataObject> myDataset) {
+    public MyRecyclerViewAdapter2(ArrayList<DataObject> myDataset) {
         mDataset = myDataset;
     }
 
@@ -74,7 +75,7 @@ public class MyRecyclerViewAdapter extends RecyclerView
         holder.dateTime.setText(mDataset.get(position).getmText2());
 
 
-        GetDataDisease get=new GetDataDisease(holder.img_view.getContext());
+        GetDataDiseaseReported get=new GetDataDiseaseReported(holder.img_view.getContext());
 
         String url=get.getData(position+1,6);
 
@@ -82,7 +83,6 @@ public class MyRecyclerViewAdapter extends RecyclerView
                 .load(url).fit()
 
                 .into(holder.img_view);
-
 
 
     }

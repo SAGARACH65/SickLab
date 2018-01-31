@@ -9,6 +9,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.squareup.picasso.Picasso;
+
 public class DiseaseDescriptionForDoctors extends AppCompatActivity {
 
     @Override
@@ -22,8 +24,6 @@ public class DiseaseDescriptionForDoctors extends AppCompatActivity {
         String img_url = extras.getString("img_url");
 
 
-
-
         ImageView img = (ImageView) findViewById(R.id.tv_header_title);
         img.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -35,19 +35,23 @@ public class DiseaseDescriptionForDoctors extends AppCompatActivity {
                 startActivity(intent);
 
 
-
-
             }
         });
 
 
-        TextView tv=(TextView) findViewById(R.id.mainToolBar);
+        TextView tv = (TextView) findViewById(R.id.mainToolBar);
         tv.setText(disease_name);
 
 
         TextView tv1 = (TextView) findViewById(R.id.textView11);
         tv1.setText(description);
 
+
+        ImageView imageview = (ImageView) findViewById(R.id.header);
+        Picasso.with(getApplicationContext())
+                .load(img_url).fit()
+
+                .into(imageview);
 
     }
 }

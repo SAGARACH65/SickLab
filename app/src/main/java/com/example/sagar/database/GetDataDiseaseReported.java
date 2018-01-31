@@ -5,9 +5,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-/**
- * Created by Sagar on 11/19/2017.
- */
+
 
 public class GetDataDiseaseReported {
 

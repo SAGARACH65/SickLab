@@ -32,10 +32,10 @@ public class IntroActivity extends AppIntro {
 
         // Instead of fragments, you can also use our default slide
         // Just set a title, description, background and image. AppIntro will do the rest.
-        addSlide(AppIntroFragment.newInstance("Hi", "Welcome", R.drawable.background_login, getResources().getColor(R.color.bg_screen1)));
-        addSlide(AppIntroFragment.newInstance("Sicklab", "Made for communicating between diseases", R.drawable.background_login, getResources().getColor(R.color.bg_screen2)));
-        addSlide(AppIntroFragment.newInstance("You Retards", "Find Something to put in Here", R.drawable.background_login, getResources().getColor(R.color.bg_screen3)));
-        addSlide(AppIntroFragment.newInstance("I have trial on Friday", "We go to movies on Monday morning? Or lets go on friday after clz? ", R.drawable.background_login, getResources().getColor(R.color.bg_screen4)));
+        addSlide(AppIntroFragment.newInstance("Welcome to", "EpiCare", R.drawable.logo, getResources().getColor(R.color.bg_screen1)));
+        addSlide(AppIntroFragment.newInstance("Helps You To", " Be Aware About Epidemics", R.drawable.cold, getResources().getColor(R.color.bg_screen2)));
+        addSlide(AppIntroFragment.newInstance("You Get Preventive Measures", "And Get ToBe Safe", R.drawable.seth, getResources().getColor(R.color.bg_screen3)));
+        addSlide(AppIntroFragment.newInstance("Help The Community", "By Reporting About The Diseases Near You ", R.drawable.report, getResources().getColor(R.color.bg_screen4)));
 
 
         //getColor(R.id.))

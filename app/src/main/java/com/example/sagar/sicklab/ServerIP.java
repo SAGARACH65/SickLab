@@ -5,7 +5,7 @@ package com.example.sagar.sicklab;
  */
 
 public interface ServerIP {
-    String IP = "http://192.168.1.50:8000/api/";
+    String IP = "http://192.168.0.112:8000/api/";
     String register_head = "register?";
     String login_head = "login?";
     String report_head = "report?";
@@ -32,6 +32,7 @@ public interface ServerIP {
     String trending_longitude = "&longitude=";
 
     String history_head = "disease/history?";
+    String unverified_head = "disease/unverified?";
 
     String suggestion_head = "suggestion?";
     String suggestion_text = "text=";

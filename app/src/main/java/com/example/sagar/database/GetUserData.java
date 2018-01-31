@@ -26,7 +26,7 @@ public class GetUserData {
     public String getData(String request) {
         SQLiteDatabase db = open();
         Cursor cursor = db.query("login_info",
-                new String[]{"_id", "Token", "user_type", "email","user_name"},
+                new String[]{"_id", "Token", "user_type", "email", "user_name"},
                 null,
                 null, null, null, null
         );
@@ -34,7 +34,6 @@ public class GetUserData {
         cursor.close();
         return send;
     }
-
 
 
     private String getDataAccToRequest(Cursor cursor, String request) {
