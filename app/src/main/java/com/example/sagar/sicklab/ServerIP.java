@@ -5,8 +5,8 @@ package com.example.sagar.sicklab;
  */
 
 public interface ServerIP {
-    String IP = "http://192.168.0.112:8000/api/";
-    String register_head = "register?";
+    String IP = "http:// 10.10.10.161:8080/";
+    String register_head = "register/";
     String login_head = "login?";
     String report_head = "report?";
     String register_name = "name=";

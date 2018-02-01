@@ -55,8 +55,8 @@ public class MakeReports extends AppCompatActivity implements ServerIP {
 
             city = gpsTracker.getLocality(this);
 
-            TextView tv = (TextView) findViewById(R.id.textView14);
-            tv.setText("Your Current Location:" + city);
+            TextView tv = (TextView) findViewById(R.id.textView9);
+            tv.setText("Your Current Location" + city);
 //            String postalCode = gpsTracker.getPostalCode(this);
 //
 //            String addressLine = gpsTracker.getAddressLine(this);
@@ -249,41 +249,40 @@ public class MakeReports extends AppCompatActivity implements ServerIP {
     }
 
     private static final String[] COUNTRIES = new String[]{
-            "influenza",
-            "ebola virus",
-            "cholera",
-            "hiv/aids",
-            "smallpox",
-            "yellow fever",
-            "measles",
-            "severe acute respiratory syndrome",
-            "viral hemorrhagic fever",
-            "poliomyelitis",
-            "emerging infectious",
-            "bubonic plague",
-            "swine influenza",
-            "chikungunya virus infection",
-            "typhus",
-            "pertussis",
-            "lassa fever",
-            "epidemic typhus",
-            "mumps",
-            "diphtheria",
-            "rift valley fever",
-            "hepatitis e",
-            "relapsing fever",
-            "pertussis",
-            "lassa fever",
-            "epidemic typhus",
-            "mumps",
-            "diphtheria",
-            "rift valley fever",
-            "hepatitis e",
-            "relapsing fever",
-            "pneumonic plague",
-            "foot-and-mouth disease",
-            "zika fever",
-            "dengue fever"
+            "Influenza",
+            "Ebola virus",
+            "Cholera",
+            "Hiv/aids",
+            "Smallpox",
+            "Yellow fever",
+            "Measles",
+            "Severe acute respiratory syndrome",
+            "Viral hemorrhagic fever",
+            "Poliomyelitis",
+            "Emerging infectious",
+            "Bubonic plague",
+            "Swine influenza",
+            "Chikungunya virus infection",
+            "Typhus",
+            "Pertussis",
+            "Lassa fever",
+            "Epidemic typhus",
+            "Mumps",
+            "Diphtheria",
+            "Rift valley fever",
+            "Hepatitis e",
+            "Relapsing fever",
+            "Pertussis",
+            "Lassa fever",
+            "Epidemic typhus",
+            "Mumps",
+            "Rift valley fever",
+            "Hepatitis e",
+            "Relapsing fever",
+            "Pneumonic plague",
+            "Foot-and-mouth disease",
+            "Zika fever",
+            "Dengue fever"
 
     };
 

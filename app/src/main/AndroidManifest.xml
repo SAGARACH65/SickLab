@@ -34,7 +34,7 @@
         <activity android:name=".MakeReports" />
         <activity android:name=".DiseaseDescription" />
         <activity android:name=".DiseaseDescriptionForDoctors" />
-        <activity android:name=".AddSuggestionsByDoctors"></activity>
+        <activity android:name=".AddSuggestionsByDoctors"/>
     </application>
 
 </manifest>

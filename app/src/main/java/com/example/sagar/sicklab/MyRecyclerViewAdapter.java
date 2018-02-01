@@ -39,6 +39,7 @@ public class MyRecyclerViewAdapter extends RecyclerView
             dateTime = (TextView) itemView.findViewById(R.id.textView13);
             img_view = (ImageView) itemView.findViewById(R.id.imageView4);
 
+
             Log.i(LOG_TAG, "Adding Listener");
             itemView.setOnClickListener(this);
         }
@@ -82,8 +83,6 @@ public class MyRecyclerViewAdapter extends RecyclerView
                 .load(url).fit()
 
                 .into(holder.img_view);
-
-
 
     }
 

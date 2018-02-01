@@ -192,18 +192,17 @@ public class GPSTracker extends Service implements LocationListener {
      * Function to show settings alert dialog
      */
 
-    //TODO cehck here
     public void showSettingsAlert() {
         AlertDialog.Builder alertDialog = new AlertDialog.Builder(mContext);
 
         //Setting Dialog Title
-        alertDialog.setTitle(R.string.app_name);
+        alertDialog.setTitle(R.string.GPSTitle);
 
         //Setting Dialog Message
-        alertDialog.setMessage(R.string.app_name);
+        alertDialog.setMessage(R.string.GPSDescription);
 
         //On Pressing Setting button
-        alertDialog.setPositiveButton(R.string.app_name, new DialogInterface.OnClickListener() {
+        alertDialog.setPositiveButton(R.string.Ok, new DialogInterface.OnClickListener() {
 
             @Override
             public void onClick(DialogInterface dialog, int which)

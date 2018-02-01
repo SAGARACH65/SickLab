@@ -46,8 +46,7 @@ public class SignUP extends AppCompatActivity {
                 bitmap.compress(Bitmap.CompressFormat.JPEG, 100, baos);
                 byte[] imageBytes = baos.toByteArray();
                 String encodedImage = Base64.encodeToString(imageBytes, Base64.DEFAULT);
-                int i = 0;
-                i++;
+
                 break;
             default:
                 super.onActivityResult(requestCode, resultCode, data);

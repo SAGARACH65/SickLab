@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">SickLab</string>
+    <string name="app_name">EpiCare</string>
 
     <string name="title_activity_login_page">LoginPage</string>
     <string name="dummy_button">Dummy Button</string>
@@ -37,7 +37,7 @@
     <string name="make_report">Make a Report</string>
     <string name="enter_disease_name">Enter Disease Name</string>
     <string name="select_no">Select Number of People Infected</string>
-    <string name="disclamair">Note:You can report only a maximum of 10</string>
+    <string name="disclamair">Note:You can report only a maximum of 5</string>
     <string name="report">Report</string>
 
     <string name="enter_suggest">Enter Your Suggestions</string>
@@ -45,8 +45,27 @@
 
     <string name="hint">Enter Your Message Here</string>
     <string name="authenticating">Authenticating Please Wait....</string>
-    <string name="cancel">Cancle</string>
+    <string name="cancel">Cancel</string>
     <string name="pick_image_intent_text">Pick A Image</string>
 
+<string name="GPSTitle">GPS Required</string>
+    <string name="GPSDescription">Please Enable GPS</string>
 
+    <string name="Ok">OK</string>
+    <string name="add_des">Add Description</string>
+    <string name="location_info">Your Current Location:</string>
+    <string name="desc">Please Enter the following information of the person you are reporting</string>
+
+
+    <string name="age_des">Age of the Person in Report</string>
+    <string name="enter_docs">You can enter Documents to verify the report</string>
+
+<array name="spinner_age">
+    <item>0-12</item>
+    <item>13-20</item>
+    <item>21-30</item>
+    <item>30-50</item>
+    <item>2-15</item>
+
+</array>
 </resources>
