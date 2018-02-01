@@ -195,10 +195,11 @@ public class LoginPage extends AppCompatActivity implements ServerIP {
                     if (check_message.equals("true")) {
 
 
-                        String token = jsonObj.getString("api_token");
-                        String user_type = jsonObj.getString("type");
+                        String token = jsonObj.getString("token");
+                        String user_type = jsonObj.getString("doctor");
                         String user_name = jsonObj.getString("name");
-                        String user_email = jsonObj.getString("email");
+//                      String user_email = jsonObj.getString("email");
+                        String user_email = "abc@gmail.com";
 
                         storeInfo(token, user_type, user_email, user_name);
 
@@ -288,42 +289,43 @@ public class LoginPage extends AppCompatActivity implements ServerIP {
                 try {
                     JSONObject jsonObj = new JSONObject(jsonStr);
 
+//                    // Getting JSON Array node
+////                    JSONArray loginresponse = jsonObj.json("contacts");
+//                    String check_message = jsonObj.getString("success");
+//
+//
+//                    if (check_message.equals("1")) {
+
+
                     // Getting JSON Array node
-//                    JSONArray loginresponse = jsonObj.json("contacts");
-                    String check_message = jsonObj.getString("success");
+                    JSONArray data = jsonObj.getJSONArray("diseases");
 
+                    for (int i = 0; i < data.length(); i++) {
+                        JSONObject c = data.getJSONObject(i);
+                        String disease_name = c.getString("disease");
+                        String district = c.getString("district");
+                        String no_of_reports = c.getString("no_of_reports");
+                        String first_reported = c.getString("first_reported");
+                        String last_reported = c.getString("last_reported");
+                        String image_link = c.getString("image_url");
+                        String description = c.getString("description");
+                        String prevention = c.getString("description");
 
-                    if (check_message.equals("true")) {
-
-
-                        // Getting JSON Array node
-                        JSONArray data = jsonObj.getJSONArray("diseases");
-
-                        for (int i = 0; i < data.length(); i++) {
-                            JSONObject c = data.getJSONObject(i);
-                            String disease_name = c.getString("disease");
-                            String district = c.getString("district");
-                            String no_of_reports = c.getString("no_of_reports");
-                            String first_reported = c.getString("first_reported");
-                            String last_reported = c.getString("last_reported");
-                            String image_link = c.getString("image_link");
-                            String description = c.getString("description");
-
-                            DataStoreDisease store = new DataStoreDisease(getApplicationContext());
-                            if (i == 0) {
-                                store.storeDiseaseInfo(disease_name, district, no_of_reports, first_reported, last_reported, image_link, description, true, false);
-                            } else {
-                                store.storeDiseaseInfo(disease_name, district, no_of_reports, first_reported, last_reported, image_link, description, false, false);
-                            }
-
+                        DataStoreDisease store = new DataStoreDisease(getApplicationContext());
+                        if (i == 0) {
+                            store.storeDiseaseInfo(disease_name, district, no_of_reports, first_reported, last_reported, image_link, description, true, false);
+                        } else {
+                            store.storeDiseaseInfo(disease_name, district, no_of_reports, first_reported, last_reported, image_link, description, false, false);
                         }
 
-
-                    } else {
-                        dialog.dismiss();
-                        has_error_occured = true;
                     }
 
+
+//                    } else {
+//                        dialog.dismiss();
+//                        has_error_occured = true;
+//                    }
+//
 
                 } catch (final JSONException e) {
                     Log.e("LoginPage", "Json parsing error: " + e.getMessage());
@@ -397,40 +399,40 @@ public class LoginPage extends AppCompatActivity implements ServerIP {
                     JSONObject jsonObj = new JSONObject(jsonStr);
 
                     // Getting JSON Array node
-//                    JSONArray loginresponse = jsonObj.json("contacts");
-                    String check_message = jsonObj.getString("success");
+////                    JSONArray loginresponse = jsonObj.json("contacts");
+//                    String check_message = jsonObj.getString("success");
+//
+//
+//                    if (check_message.equals("true")) {
 
 
-                    if (check_message.equals("true")) {
+                    // Getting JSON Array node
+                    JSONArray data = jsonObj.getJSONArray("diseases");
 
+                    for (int i = 0; i < data.length(); i++) {
+                        JSONObject c = data.getJSONObject(i);
+                        String disease_name = c.getString("disease");
+                        String district = c.getString("district");
+                        String no_of_reports = c.getString("no_of_reports");
+                        String first_reported = c.getString("start_date");
+                        String last_reported = c.getString("end_date");
+                        String image_link = c.getString("image_link");
+                        String description = c.getString("description");
 
-                        // Getting JSON Array node
-                        JSONArray data = jsonObj.getJSONArray("diseases");
-
-                        for (int i = 0; i < data.length(); i++) {
-                            JSONObject c = data.getJSONObject(i);
-                            String disease_name = c.getString("disease");
-                            String district = c.getString("district");
-                            String no_of_reports = c.getString("no_of_reports");
-                            String first_reported = c.getString("start_date");
-                            String last_reported = c.getString("end_date");
-                            String image_link = c.getString("image_link");
-                            String description = c.getString("description");
-
-                            DataStoreDiseaseHistory store = new DataStoreDiseaseHistory(getApplicationContext());
-                            if (i == 0) {
-                                store.storeDiseaseInfo(disease_name, district, no_of_reports, first_reported, last_reported, image_link, description, true, false);
-                            } else {
-                                store.storeDiseaseInfo(disease_name, district, no_of_reports, first_reported, last_reported, image_link, description, false, false);
-                            }
-
+                        DataStoreDiseaseHistory store = new DataStoreDiseaseHistory(getApplicationContext());
+                        if (i == 0) {
+                            store.storeDiseaseInfo(disease_name, district, no_of_reports, first_reported, last_reported, image_link, description, true, false);
+                        } else {
+                            store.storeDiseaseInfo(disease_name, district, no_of_reports, first_reported, last_reported, image_link, description, false, false);
                         }
 
-
-                    } else {
-                        dialog.dismiss();
-                        has_error_occured = true;
                     }
+//
+//
+//                    } else {
+//                        dialog.dismiss();
+//                        has_error_occured = true;
+//                    }
 
 
                 } catch (final JSONException e) {
