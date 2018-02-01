@@ -96,16 +96,19 @@
             android:layout_toEndOf="@+id/textViewEnterDocs"
             android:paddingStart="10dp" />
 
-        <EditText
+        <Spinner
             android:id="@+id/editText2"
             android:layout_width="match_parent"
 
             android:layout_height="50dp"
-            android:layout_alignStart="@+id/editText"
+            android:layout_alignStart="@+id/textViewEnterDocs"
             android:layout_below="@+id/textView11"
-            android:layout_marginEnd="35dp"
+
             android:layout_marginTop="14dp"
-            android:background="@drawable/rounded_edittext"
+            android:background="@drawable/custom_spinner"
+            android:layout_marginEnd="80dp"
+            android:layout_marginStart="40dp"
+            android:entries="@array/spinner_gender"
             android:ems="10"
             android:inputType="number"
             android:paddingStart="5dp" />
@@ -115,10 +118,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
-            android:layout_alignStart="@+id/editText2"
+            android:layout_alignStart="@+id/textViewEnterDocs"
             android:layout_below="@+id/textViewAgeDesc"
             android:layout_marginTop="10dp"
-            android:text="@string/age_des"
+            android:text="@string/gender_des"
             android:textColor="@color/white"
             android:textSize="15sp"
             android:textStyle="bold" />
@@ -129,7 +132,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
-            android:layout_alignStart="@+id/editText2"
+            android:layout_alignStart="@+id/textViewEnterDocs"
             android:layout_below="@+id/editText2"
             android:layout_marginTop="10dp"
             android:text="@string/age_des"
@@ -141,11 +144,13 @@
             android:id="@+id/editText3"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:layout_alignStart="@+id/editText"
+
+            android:layout_alignStart="@+id/textViewEnterDocs"
             android:layout_below="@+id/textview10"
-            android:layout_marginEnd="35dp"
             android:layout_marginTop="14dp"
             android:background="@drawable/custom_spinner"
+            android:layout_marginEnd="80dp"
+            android:layout_marginStart="40dp"
             android:ems="10"
             android:entries="@array/spinner_age"
             android:inputType="number"

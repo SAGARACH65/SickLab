@@ -48,7 +48,7 @@
     <string name="cancel">Cancel</string>
     <string name="pick_image_intent_text">Pick A Image</string>
 
-<string name="GPSTitle">GPS Required</string>
+    <string name="GPSTitle">GPS Required</string>
     <string name="GPSDescription">Please Enable GPS</string>
 
     <string name="Ok">OK</string>
@@ -58,14 +58,20 @@
 
 
     <string name="age_des">Age of the Person in Report</string>
+    <string name="gender_des">Gender of the Person in Report</string>
     <string name="enter_docs">You can enter Documents to verify the report</string>
 
-<array name="spinner_age">
-    <item>0-12</item>
-    <item>13-20</item>
-    <item>21-30</item>
-    <item>30-50</item>
-    <item>2-15</item>
+    <array name="spinner_age">
+        <item>0-12</item>
+        <item>13-20</item>
+        <item>21-30</item>
+        <item>31-40</item>
+        <item>41-50</item>
+        <item>50+</item>
+    </array>
+    <array name="spinner_gender">
+        <item>Male</item>
+        <item>Female</item>
+    </array>
 
-</array>
 </resources>
